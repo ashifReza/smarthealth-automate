@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="smarthealth.appAutomate.NewBornActions">
+        <methods>
+          <include name="memberAdd"/>
+          <include name="ECCDAdd"/>
+          <include name="PNCAdd"/>
+          <include name="tearDown"/>
+          <include name="configAppium"/>
+        </methods>
+      </class> <!-- smarthealth.appAutomate.NewBornActions -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
