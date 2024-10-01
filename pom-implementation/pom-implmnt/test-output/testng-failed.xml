@@ -9,7 +9,6 @@
           <include name="testMemberAdd"/>
           <include name="tearDown"/>
           <include name="configAppium"/>
-          <include name="testECCDAdd"/>
         </methods>
       </class> <!-- test.classes.NewbornAddTest -->
     </classes>

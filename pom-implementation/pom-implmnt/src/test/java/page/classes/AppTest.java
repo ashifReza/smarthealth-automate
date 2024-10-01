@@ -48,7 +48,7 @@ public class AppTest
         
 		//create object for android user
 		driver = new AndroidDriver(new URL("http://192.168.22.51:4723"), options);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 	}
 	

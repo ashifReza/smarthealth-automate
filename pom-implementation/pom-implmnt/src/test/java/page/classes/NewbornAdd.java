@@ -23,6 +23,7 @@ public class NewbornAdd extends AppTest {
     private By submitButton = By.id("org.smartregister.unicef.mis:id/next");
     private By monthButton = By.className("android.widget.Button");
     private By okButton = By.id("org.smartregister.unicef.mis:id/ok_button");
+    private By followUpTab = By.xpath("//android.widget.TextView[@text='ফলোআপ']");
 
 
 
@@ -52,6 +53,10 @@ public void clickDOB() {
     driver.findElement(dobField).click();
     List<WebElement> buttons = driver.findElements(monthButton);
     buttons.get(1).click();  // Click month
+    buttons.get(1).click();
+    for(int i=0;i<11; i++) {
+    	buttons.get(3).click();
+    }
     driver.findElement(okButton).click();  // Confirm date selection
     scrollToText("জমা দিন");
 }
@@ -67,6 +72,7 @@ public void selectRelationAndGender(int relationIndex, int genderIndex) {
 // Method to scroll and submit the form
 public void SubmitForm() {
     driver.findElement(submitButton).click();
+    driver.findElement(followUpTab).click();
 }
 
 // Reusable method to select from dropdown by index

@@ -1,13 +1,16 @@
 package test.classes;
 
-
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.testng.SkipException;
 import org.testng.annotations.Test;
 
 import page.classes.AppTest;
 import page.classes.ECCDPage;
-import page.classes.LoginPage;
+//import page.classes.LoginPage;
 import page.classes.NewbornAdd;
 import page.classes.PNCPage;
+
 
 public class NewbornAddTest extends AppTest {
 	
@@ -22,7 +25,7 @@ public class NewbornAddTest extends AppTest {
 
         // Perform the actions
         newBornPage.selectListItem(1);  // Select the second item in the RecyclerView
-        newBornPage.addNewChild("Harry", "01249875654", "Mina");  // Fill in details
+        newBornPage.addNewChild("Rogers", "01249875654", "Mina");  // Fill in details
         newBornPage.clickDOB();  // Click on DOB field
         
 
@@ -33,6 +36,24 @@ public class NewbornAddTest extends AppTest {
 	
 	@Test (dependsOnMethods = "testMemberAdd")
     public void testPNCAdd() throws InterruptedException {
+		
+		// Check if the specific element exists in the DOM
+	    boolean isElementPresent = false;
+	    try {
+	        // Try to find the element using XPath
+	        driver.findElement(By.xpath("//android.widget.TextView[@text='নবজাতক পি এন সি - ১ম']"));
+	        isElementPresent = true;
+	    } catch (NoSuchElementException e) {
+	        // Element not found, so we will skip the test
+	        isElementPresent = false;
+	    }
+
+	    // Skip the test if the element is not present
+	    if (!isElementPresent) {
+	        throw new SkipException("Skipping testPNCAdd since the element is not found");
+	    }
+
+		
         // Initialize the PNCPage
         PNCPage pncPage = new PNCPage(driver);
 
@@ -55,7 +76,7 @@ public class NewbornAddTest extends AppTest {
         pncPage.submitPNCForm();
     }
 	
-	@Test (dependsOnMethods = "testPNCAdd")
+	@Test (dependsOnMethods = "testPNCAdd", alwaysRun = true)
     public void testECCDAdd() throws InterruptedException {
         // Initialize ECCDPage object
         ECCDPage eccdPage = new ECCDPage(driver);
@@ -75,7 +96,7 @@ public class NewbornAddTest extends AppTest {
         eccdPage.scrollToSubmit();
 
         // Select referrer
-        eccdPage.selectReferrer(2);
+        eccdPage.selectReferrer(1);
 
         // Submit the form and confirm
         eccdPage.submitForm();

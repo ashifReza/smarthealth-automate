@@ -1,30 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="0" failed="1" skipped="2">
+<testng-results ignored="0" total="3" passed="2" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-01T14:13:25 BDT" name="Default suite" finished-at="2024-10-01T14:13:37 BDT" duration-ms="11796">
+  <suite started-at="2024-10-01T16:45:05 BDT" name="Default suite" finished-at="2024-10-01T16:46:05 BDT" duration-ms="60182">
     <groups>
     </groups>
-    <test started-at="2024-10-01T14:13:25 BDT" name="Default test" finished-at="2024-10-01T14:13:37 BDT" duration-ms="11796">
+    <test started-at="2024-10-01T16:45:05 BDT" name="Default test" finished-at="2024-10-01T16:46:05 BDT" duration-ms="60182">
       <class name="test.classes.NewbornAddTest">
-        <test-method is-config="true" signature="configAppium()[pri:0, instance:test.classes.NewbornAddTest@55fe41ea]" started-at="2024-10-01T14:13:25 BDT" name="configAppium" finished-at="2024-10-01T14:13:30 BDT" duration-ms="5217" status="PASS">
+        <test-method is-config="true" signature="configAppium()[pri:0, instance:test.classes.NewbornAddTest@2aceadd4]" started-at="2024-10-01T16:45:05 BDT" name="configAppium" finished-at="2024-10-01T16:45:10 BDT" duration-ms="4652" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAppium -->
-        <test-method signature="testMemberAdd()[pri:0, instance:test.classes.NewbornAddTest@55fe41ea]" started-at="2024-10-01T14:13:30 BDT" name="testMemberAdd" finished-at="2024-10-01T14:13:37 BDT" duration-ms="6356" status="FAIL">
-          <exception class="java.lang.IndexOutOfBoundsException">
+        <test-method signature="testMemberAdd()[pri:0, instance:test.classes.NewbornAddTest@2aceadd4]" started-at="2024-10-01T16:45:10 BDT" name="testMemberAdd" finished-at="2024-10-01T16:45:38 BDT" duration-ms="27863" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMemberAdd -->
+        <test-method signature="testPNCAdd()[pri:0, instance:test.classes.NewbornAddTest@2aceadd4]" started-at="2024-10-01T16:45:38 BDT" name="testPNCAdd" finished-at="2024-10-01T16:45:48 BDT" depends-on-methods="test.classes.NewbornAddTest.testMemberAdd" duration-ms="10084" status="SKIP">
+          <exception class="org.testng.SkipException">
             <message>
-              <![CDATA[Index 1 out of bounds for length 1]]>
+              <![CDATA[Skipping testPNCAdd since the element is not found]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
-at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-at java.base/java.util.Objects.checkIndex(Objects.java:359)
-at java.base/java.util.ArrayList.get(ArrayList.java:427)
-at page.classes.NewbornAdd.selectListItem(NewbornAdd.java:38)
-at test.classes.NewbornAddTest.testMemberAdd(NewbornAddTest.java:24)
+              <![CDATA[org.testng.SkipException: Skipping testPNCAdd since the element is not found
+at test.classes.NewbornAddTest.testPNCAdd(NewbornAddTest.java:53)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -55,79 +53,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IndexOutOfBoundsException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMemberAdd -->
-        <test-method signature="testPNCAdd()[pri:0, instance:test.classes.NewbornAddTest@55fe41ea]" started-at="2024-10-01T14:13:37 BDT" name="testPNCAdd" finished-at="2024-10-01T14:13:37 BDT" depends-on-methods="test.classes.NewbornAddTest.testMemberAdd" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method test.classes.NewbornAddTest.testPNCAdd() on instance test.classes.NewbornAddTest@55fe41ea depends on not successfully finished methods 
-[test.classes.NewbornAddTest.testMemberAdd() on instance test.classes.NewbornAddTest@55fe41ea]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method test.classes.NewbornAddTest.testPNCAdd() on instance test.classes.NewbornAddTest@55fe41ea depends on not successfully finished methods 
-[test.classes.NewbornAddTest.testMemberAdd() on instance test.classes.NewbornAddTest@55fe41ea]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPNCAdd -->
-        <test-method signature="testECCDAdd()[pri:0, instance:test.classes.NewbornAddTest@55fe41ea]" started-at="2024-10-01T14:13:37 BDT" name="testECCDAdd" finished-at="2024-10-01T14:13:37 BDT" depends-on-methods="test.classes.NewbornAddTest.testPNCAdd" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method test.classes.NewbornAddTest.testECCDAdd() on instance test.classes.NewbornAddTest@55fe41ea depends on not successfully finished methods 
-[test.classes.NewbornAddTest.testPNCAdd() on instance test.classes.NewbornAddTest@55fe41ea]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method test.classes.NewbornAddTest.testECCDAdd() on instance test.classes.NewbornAddTest@55fe41ea depends on not successfully finished methods 
-[test.classes.NewbornAddTest.testPNCAdd() on instance test.classes.NewbornAddTest@55fe41ea]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method signature="testECCDAdd()[pri:0, instance:test.classes.NewbornAddTest@2aceadd4]" started-at="2024-10-01T16:45:48 BDT" name="testECCDAdd" finished-at="2024-10-01T16:46:05 BDT" depends-on-methods="test.classes.NewbornAddTest.testPNCAdd" duration-ms="17381" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testECCDAdd -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.classes.NewbornAddTest@55fe41ea]" started-at="2024-10-01T14:13:37 BDT" name="tearDown" finished-at="2024-10-01T14:13:37 BDT" duration-ms="178" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.classes.NewbornAddTest@2aceadd4]" started-at="2024-10-01T16:46:05 BDT" name="tearDown" finished-at="2024-10-01T16:46:05 BDT" duration-ms="166" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
