@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.classes.AddHhTest">
+      <class name="test.classes.NewbornAddTest">
         <methods>
-          <include name="testHouseholdCreation"/>
+          <include name="testPNCAdd"/>
+          <include name="testMemberAdd"/>
           <include name="tearDown"/>
           <include name="configAppium"/>
+          <include name="testECCDAdd"/>
         </methods>
-      </class> <!-- test.classes.AddHhTest -->
+      </class> <!-- test.classes.NewbornAddTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
